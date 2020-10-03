@@ -1,0 +1,46 @@
+# see https://github.com/GNOME/gnome-terminal/blob/ce2f5cf07099e8005bddc8a750173f32766390f6/src/profile-editor.c#L244
+# see also http://manpages.ubuntu.com/manpages/bionic/man8/setvtrgb.8.html
+
+# default_red:  color0_R,color1_R,...,color15_R
+# default_grn:  color0_G,color1_G,...,color15_G
+# default_blu:  color0_B,color1_B,...,color15_B
+
+#+--------+--------+---------+
+#| Normal | Bright | Color   |
+#+--------+--------+---------+
+#|      0 |      8 | Black   |  
+#|      1 |      9 | Red     |  
+#|      2 |     10 | Green   |
+#|      3 |     11 | Yellow  |
+#|      4 |     12 | Blue    |
+#|      5 |     13 | Magenta |
+#|      6 |     14 | Cyan    |
+#|      7 |     15 | White   |  
+#+---------------------------+
+
+# the virtual terminal default background and foreground color, can be set with setterm
+# it looks like the gnome color palette
+
+# this is the original "tango" color paletter from gnome-terminal
+# but the terminal default foreground color "white" and background "color" are replaced
+# with the foreground and background color values from "white on black"
+# https://github.com/GNOME/gnome-terminal/blob/ce2f5cf07099e8005bddc8a750173f32766390f6/src/profile-editor.c#L173
+
+#   COLOR (0x2e, 0x34, 0x36), # 0 black normal
+    COLOR (0x00, 0x00, 0x00), # 0 black normal
+    COLOR (0xcc, 0x00, 0x00), # 1 red
+    COLOR (0x4e, 0x9a, 0x06), # 2 green
+    COLOR (0xc4, 0xa0, 0x00), # 3 yellow
+    COLOR (0x34, 0x65, 0xa4), # 4 blue
+    COLOR (0x75, 0x50, 0x7b), # 5 magenta
+    COLOR (0x06, 0x98, 0x9a), # 6 cyan
+#   COLOR (0xd3, 0xd7, 0xcf), # 7 white
+    COLOR (0xff, 0xff, 0xff), # 7 white
+    COLOR (0x55, 0x57, 0x53), # 8 black bright/bold
+    COLOR (0xef, 0x29, 0x29), # 9
+    COLOR (0x8a, 0xe2, 0x34),
+    COLOR (0xfc, 0xe9, 0x4f),
+    COLOR (0x72, 0x9f, 0xcf),
+    COLOR (0xad, 0x7f, 0xa8),
+    COLOR (0x34, 0xe2, 0xe2),
+    COLOR (0xee, 0xee, 0xec) 
